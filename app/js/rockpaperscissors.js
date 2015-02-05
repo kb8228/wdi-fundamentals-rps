@@ -20,17 +20,17 @@ function randomPlay() {
 ////////////////////////////////////////////////
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
-
+//done 02/04/15
 function getPlayerMove(move) {
     // If a move is given, your expression should evaluate to that move.
     // If move is not specified / is null, your expression should run getInput()
-    return /* Your Expression */;
+    return move || getInput();
 }
-
+//done 02/04/15
 function getComputerMove(move) {
     // If a move is given, your expression should evaluate to that move.
     // If move is not specified / is null, your expression should run randomPlay()
-    return /* Your Expression */;
+    return move || randomPlay();
 }
 
 function getWinner(playerMove,computerMove) {
