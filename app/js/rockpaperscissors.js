@@ -5,7 +5,7 @@
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
-    return prompt();
+    return prompt("Please choose either 'rock', 'paper', or 'scissors'.");
 }
 function randomPlay() {
     var randomNumber = Math.random();
@@ -36,7 +36,7 @@ function getWinner(playerMove,computerMove) {
     // The rules of the game are that rock beats scissors, scissors beats paper, and paper beats rock.
     // Assume that the only possible input values we can get are 'rock', 'paper', and 'scissors'.
     playerMove = getPlayerMove();
-    console.log("Your move is: " + playerMove);
+    console.log("Player move is: " + playerMove);
     computerMove = getComputerMove();
     console.log("Computer move is: " + computerMove);
 
@@ -54,16 +54,25 @@ function getWinner(playerMove,computerMove) {
     } 
 }
 
-function playToFive() {
+function playTo(x) {
     console.log("Let's play Rock Paper Scissors");
     var playerWins = 0;
     var computerWins = 0;
     // This function should continue to play Rock Paper Scissors until either the player or the computer has won five times.
-
+    while (playerWins < x && computerWins < x){
+        var gameResult = getWinner();
+        if(gameResult === "Player wins!"){
+            playerWins += 1;
+        }
+        else if (gameResult === "Computer wins!"){
+            computerWins += 1;
+        }
+        console.log("Result of this round: " + gameResult + "\n" + "Current score is: " + playerWins + " to " + computerWins);
+    }
     // After each 'round', display some text in the console indicating who played what, who won, and what the current scoreboard looks like.
     // For example,
     //  console.log("Player chose " + playerMove + " while Computer chose " + computerMove);
     //  console.log("The score is currently " + playerWins + " to " + computerWins + "\n");
-    return [playerWins, computerWins];
+    return (playerWins > computerWins ? "Player wins match!" : "Computer wins match!");
 }
 
