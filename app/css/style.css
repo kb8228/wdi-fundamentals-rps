@@ -1,0 +1,76 @@
+* {
+	margin: 0px;
+}
+
+body {
+	font-family: "Avenir";
+	font-size: 14px;
+}
+
+h1 {
+
+}
+
+#container {
+	height: 513px;
+	width: 600px;
+	/*border: 1px solid red;*/
+	margin: 50px auto;
+	text-align: center;
+}
+
+#bg_pic {
+	background: url("../images/rock-scissors-paper-hi.png");
+  height: 413px;
+	width: 100%;
+}
+
+.user-choice {
+	/*border: 1px dashed green;*/
+	height: 122px;
+	width: 122px;
+	opacity: 0.75;
+	display: inline-block;
+}
+.user-choice:hover {
+	background: url("../images/green-c.png") no-repeat;
+}
+
+	#sciss-img {		
+		position: relative;
+		top: 20px;
+		left: 10px;
+	}
+
+	#paper-img{	
+		position: relative;
+		top: 50px;
+		left: 150px;	
+	}
+
+	#rock-img {	
+		position: relative;
+		top: 210px;
+		left: -150px;	
+	}
+
+#user-score {
+	font-weight: bold;
+	color: limegreen;
+}
+
+#comp-score {
+	font-weight: bold;
+	color: red;
+}
+
+#new-game {
+	color: red;
+}
+#new-game:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+.bold {
+	font-weight: bold;
+}
